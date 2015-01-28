@@ -1,0 +1,6 @@
+[submodule "dependencies/cp-common-utils"]
+	path = dependencies/cp-common-utils
+	url = https://jamesanto:680e18d20bfe9a1f37df28a21f0eb1f982e29655@github.com/jamesanto/cp-common-utils.git
+[submodule "dependencies/cp-openrdf-utils"]
+	path = dependencies/cp-openrdf-utils
+	url = https://jamesanto:680e18d20bfe9a1f37df28a21f0eb1f982e29655@github.com/jamesanto/cp-openrdf-utils.git

@@ -84,8 +84,8 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>2.3</version>
 				<configuration>
-					<source>1.6</source>
-					<target>1.6</target>
+					<source>1.7</source>
+					<target>1.7</target>
 				</configuration>
 			</plugin>
 			<!-- ensure that the test suite alone is called, it will run the other tests -->
@@ -130,7 +130,7 @@
   </dependency>
   <dependency>
    <groupId>com.complexible.common</groupId>
-   <artifactId>core</artifactId>
+   <artifactId>cp-commons-core</artifactId>
    <version>3.1.1</version>
    <scope>compile</scope>
   </dependency>
