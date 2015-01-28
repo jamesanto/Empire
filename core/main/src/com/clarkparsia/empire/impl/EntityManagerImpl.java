@@ -471,7 +471,7 @@ public final class EntityManagerImpl implements EntityManager {
 
 			postUpdate(theT);
 
-            return theT;
+	        return theT;
 		}
 		catch (DataSourceException ex) {
 			throw new PersistenceException(ex);
