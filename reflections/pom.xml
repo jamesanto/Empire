@@ -28,68 +28,43 @@
 	<build>
 		<plugins>
 			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>build-helper-maven-plugin</artifactId>
-				<version>1.1</version>
+				<artifactId>maven-source-plugin</artifactId>
 				<executions>
 					<execution>
-						<id>add-source</id>
-						<phase>generate-sources</phase>
+						<id>attach-sources</id>
+						<phase>deploy</phase>
 						<goals>
-							<goal>add-source</goal>
+							<goal>jar-no-fork</goal>
 						</goals>
-						<configuration>
-							<sources>
-								<source>src</source>
-							</sources>
-						</configuration>
 					</execution>
-					<!--execution>
-						<id>add-test-source</id>
-						<phase>generate-test-sources</phase>
-						<goals>
-							<goal>add-test-source</goal>
-						</goals>
-						<configuration>
-							<sources>
-								<source>test/src</source>
-								<source>test/data</source>
-							</sources>
-						</configuration>
-					</execution-->
 				</executions>
 			</plugin>
 			<plugin>
-      <artifactId>maven-source-plugin</artifactId>
-      <executions>
-        <execution>
-          <id>attach-sources</id>
-          <phase>deploy</phase>
-          <goals><goal>jar-no-fork</goal></goals> 
-        </execution>
-      </executions>
-    </plugin>
-    <plugin> 
-      <artifactId>maven-javadoc-plugin</artifactId> 
-      <executions> 
-        <execution> 
-          <id>attach-javadocs</id>
-          <phase>deploy</phase>
-          <goals><goal>jar</goal></goals> 
-        </execution> 
-      </executions> 
-    </plugin>
-    <plugin> 
-      <!-- explicitly define maven-deploy-plugin after other to force exec order -->
-      <artifactId>maven-deploy-plugin</artifactId> 
-      <executions> 
-        <execution> 
-          <id>deploy</id>
-          <phase>deploy</phase>
-          <goals><goal>deploy</goal></goals> 
-        </execution> 
-      </executions> 
-    </plugin>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>attach-javadocs</id>
+						<phase>deploy</phase>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<!-- explicitly define maven-deploy-plugin after other to force exec 
+					order -->
+				<artifactId>maven-deploy-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>deploy</id>
+						<phase>deploy</phase>
+						<goals>
+							<goal>deploy</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
 
