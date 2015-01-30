@@ -79,6 +79,10 @@ public class TestUtil {
     protected static File lookupFile( String base ) {
         //TODO a more robust implementation shuold not use Files, but more generalized Streams that can be looked up using CL.getResource()
         File f;
+        f = new File( TestUtil.getProjectHome(), "src/test/resources/" + base );
+        if ( f.exists() ) {
+            return f;
+        }
         f = new File( TestUtil.getProjectHome(), base );
         if ( f.exists() ) {
             return f;

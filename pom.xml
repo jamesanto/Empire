@@ -11,8 +11,8 @@
 	<description>Groups common configuration and dependencies for all the empire artifacts</description>
 
 	<modules>
-		<module>dependencies/cp-common-utils/core</module>
-		<module>dependencies/cp-openrdf-utils/core</module>
+		<module>dependencies/cp-common-utils</module>
+		<module>dependencies/cp-openrdf-utils</module>
 		<module>core</module>
 		<module>jena</module>
 		<module>reflections</module>
